@@ -42,9 +42,9 @@ app.use(
     }
 );
                 
-app.use("/api/users", userRouter);
+/*app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
-app.use("/api/orders", orderRouter);
+app.use("/api/orders", orderRouter);*/
 
 app.listen(
     8080,
