@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import cors from "cors";
+import projectRouter from "./routes/projectRouter.js";
+import skillRoutes from "./routes/skillRouter.js";
 
 dotenv.config();
 
@@ -41,10 +43,9 @@ app.use(
         next();
     }
 );
-                
-/*app.use("/api/users", userRouter);
-app.use("/api/products", productRouter);
-app.use("/api/orders", orderRouter);*/
+
+app.use("/api/projects", projectRouter);
+app.use("/api/skills", skillRoutes);
 
 app.listen(
     8080,
