@@ -13,7 +13,7 @@ const skillSchema = mongoose.Schema({
         type: String,
         enum: ["frontend", "backend", "database", "tools"],
         required: true,
-    }
+    },
 })
 
 const Skill = mongoose.model("skill", skillSchema);

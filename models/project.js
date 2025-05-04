@@ -24,7 +24,7 @@ const projectSchema = mongoose.Schema({
     skills: {
         type: [String],
         required: true,
-    }
+    },
 })
 
 const Project = mongoose.model('project', projectSchema);
