@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
 const skillSchema = mongoose.Schema({
+    icon: {
+        type: String,
+        required: true,
+    },
     name: {
         type: String,
         required: true,

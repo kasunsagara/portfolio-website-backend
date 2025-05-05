@@ -25,6 +25,14 @@ const projectSchema = mongoose.Schema({
         type: [String],
         required: true,
     },
+    githubLink: {
+        type: String,
+        required: true,
+    },
+    linkedinLink: {
+        type: String,
+        required: true,
+    },
 })
 
 const Project = mongoose.model('project', projectSchema);

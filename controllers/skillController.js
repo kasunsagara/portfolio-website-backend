@@ -2,9 +2,9 @@ import Skill from "../models/skill.js";
 
 // Add a new skill
 export async function addSkill(req, res) {
-    const { name, desc, category } = req.body;
+    const { icon, name, desc, category } = req.body;
     try {
-      const newSkill = new Skill({ name, desc, category });
+      const newSkill = new Skill({ icon, name, desc, category });
       await newSkill.save();
       res.status(201).json(newSkill);
     } catch (err) {

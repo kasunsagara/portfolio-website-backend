@@ -7,6 +7,7 @@ import cors from "cors";
 import projectRouter from "./routes/projectRouter.js";
 import skillRoutes from "./routes/skillRouter.js";
 import contactRouter from "./routes/contactRouter.js";
+import serviceRouter from "./routes/serviceRouter.js";
 
 dotenv.config();
 
@@ -48,6 +49,7 @@ app.use(
 app.use("/api/projects", projectRouter);
 app.use("/api/skills", skillRoutes);
 app.use("/api/contacts", contactRouter);
+app.use("/api/services", serviceRouter);
 
 app.listen(
     8080,

@@ -3,9 +3,9 @@ import Project from '../models/project.js';
 // Create a new project
 export async function createProject(req, res) {
   try {
-    const { name, image, description, startDate, endDate, skills } = req.body;
+    const { name, image, description, startDate, endDate, skills, githubLink, linkedinLink } = req.body;
 
-    const project = new Project({ name, image, description, startDate, endDate, skills });
+    const project = new Project({ name, image, description, startDate, endDate, skills, githubLink, linkedinLink });
     const savedProject = await project.save();
 
     res.status(201).json(savedProject);
@@ -39,11 +39,11 @@ export async function getProjectById(req, res) {
 // Update a project
 export async function updateProject(req, res) {
   try {
-    const { name, image, description, startDate, endDate, skills } = req.body;
+    const { name, image, description, startDate, endDate, skills, githubLink, linkedinLink } = req.body;
 
     const updatedProject = await Project.findByIdAndUpdate(
       req.params.id,
-      { name, image, description, startDate, endDate, skills },
+      { name, image, description, startDate, endDate, skills, githubLink, linkedinLink },
       { new: true }
     );
 
