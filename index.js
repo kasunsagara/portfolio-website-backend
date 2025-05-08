@@ -8,6 +8,7 @@ import projectRouter from "./routes/projectRouter.js";
 import skillRoutes from "./routes/skillRouter.js";
 import contactRouter from "./routes/contactRouter.js";
 import serviceRouter from "./routes/serviceRouter.js";
+import authRouter from "./routes/authRouter.js";
 
 dotenv.config();
 
@@ -50,6 +51,7 @@ app.use("/api/projects", projectRouter);
 app.use("/api/skills", skillRoutes);
 app.use("/api/contacts", contactRouter);
 app.use("/api/services", serviceRouter);
+app.use("/api/auths", authRouter);
 
 app.listen(
     8080,
