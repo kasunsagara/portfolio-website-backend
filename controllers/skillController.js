@@ -22,6 +22,17 @@ export async function getSkills(req, res) {
   }
 };
 
+export async function getSkillById(req, res) {
+  try {
+    const skill = await Skill.findById(req.params.id);
+    if (!skill) return res.status(404).json({ error: 'Skill not found' });
+    res.json(skill);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+}
+
+
 // Update a skill
 export async function updateSkill(req, res) {
   try {

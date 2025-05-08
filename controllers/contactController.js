@@ -27,3 +27,14 @@ export async function getContacts(req, res) {
     res.status(500).json({ error: 'Server error' });
   }
 }
+
+export async function deleteContact(req, res) {
+  try {
+    const { id } = req.params;
+    await Contact.findByIdAndDelete(id);
+    res.status(200).json({ message: 'Contact deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting contact:', error);
+    res.status(500).json({ error: 'Server error' });
+  }
+}
