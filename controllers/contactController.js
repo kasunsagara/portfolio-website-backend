@@ -2,13 +2,13 @@ import Contact from '../models/contact.js';
 
 export async function submitContact(req, res) {
   try {
-    const { name, email, message } = req.body;
+    const { name, phone, email, message } = req.body;
 
-    if (!name || !email || !message) {
+    if (!name || !phone || !email || !message) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
-    const newContact = new Contact({ name, email, message });
+    const newContact = new Contact({ name, phone, email, message });
     await newContact.save();
 
     res.status(201).json({ message: 'Message received successfully' });
