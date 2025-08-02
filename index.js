@@ -8,7 +8,7 @@ import projectRouter from "./routes/projectRouter.js";
 import skillRoutes from "./routes/skillRouter.js";
 import contactRouter from "./routes/contactRouter.js"; 
 import serviceRouter from "./routes/serviceRouter.js";
-import authRouter from "./routes/authRouter.js";  
+import authRouter from "./routes/authRouter.js";   
  
 dotenv.config();
 
