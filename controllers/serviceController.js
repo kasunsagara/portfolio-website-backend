@@ -8,7 +8,7 @@ export async function createService(req, res) {
       await newService.save();
       res.status(201).json(newService);
     } catch (error) {
-      res.status(400).json({ message: "Failed to create service", error });
+      res.status(400).json({ message: "Failed to create service", error }); 
     }
   };
   
